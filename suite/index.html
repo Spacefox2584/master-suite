@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Master Suite v1.1 (Open + Preload)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <nav id="suite-nav">
+    <div id="nav-tools"></div>
+    <div id="nav-actions">
+      <button id="changelogBtn">📜 Changelog</button>
+      <button id="suggestBtn">💡 Suggest Tool</button>
+      <button id="themeToggle">🌞/🌙</button>
+    </div>
+  </nav>
+
+  <main id="tool-container">
+    <!-- Preloaded iframes -->
+    <iframe id="planner-frame" class="tool-frame" src="/tools/planner/index.html"></iframe>
+    <iframe id="listings-frame" class="tool-frame hidden" src="/tools/listings/index.html"></iframe>
+    <iframe id="scraper-frame" class="tool-frame hidden" src="/tools/scraper/index.html"></iframe>
+  </main>
+
+  <!-- Changelog Modal -->
+  <div id="changelogModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('changelogModal')">&times;</span>
+      <h2>Changelog</h2>
+      <ul id="changelogList"></ul>
+    </div>
+  </div>
+
+  <!-- Suggest Tool Modal -->
+  <div id="suggestModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('suggestModal')">&times;</span>
+      <h2>Suggest a New Tool</h2>
+      <textarea id="suggestText" placeholder="Your idea..."></textarea>
+      <button id="submitSuggestion">Submit</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
