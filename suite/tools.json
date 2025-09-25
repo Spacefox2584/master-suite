@@ -1,0 +1,5 @@
+[
+  { "id": "planner", "name": "Planner", "path": "/tools/planner/index.html" },
+  { "id": "listings", "name": "Listings", "path": "/tools/listings/index.html" },
+  { "id": "scraper", "name": "Scraper", "path": "/tools/scraper/index.html" }
+]
